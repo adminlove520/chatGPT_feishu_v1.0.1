@@ -6,8 +6,8 @@
     <summary> 📷 点击展开完整功能截图</summary>
     <br>
     <p align='center'>
-    <img src='https://user-images.githubusercontent.com/50035229/223590381-ed38db74-39f3-4e77-bd3a-aaa54d679286.png' alt='' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223590817-37a56eac-ab6e-4293-862a-de0988ac50b7.png' alt='' width='800'/>
+<!--     <img src='https://user-images.githubusercontent.com/50035229/223590381-ed38db74-39f3-4e77-bd3a-aaa54d679286.png' alt='' width='800'/>
+    <img src='https://user-images.githubusercontent.com/50035229/223590817-37a56eac-ab6e-4293-862a-de0988ac50b7.png' alt='' width='800'/> -->
     <img src='https://user-images.githubusercontent.com/50035229/223591272-88e4218c-5cb6-4925-8ede-18359bdf9097.png' alt='' width='800'/>
     </p>
 
@@ -282,17 +282,12 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 
 ## 更多交流
 
-企业如需定制部署，可联系 WeChat: `laolei_forkway`，支持发票~
+欢迎加入‘东方隐侠安全实验室’ --wechat:Qianli_zhishui
 
 遇到其他问题，可以加入飞书群沟通~
 
 <img src='./docs/talk.png' alt='' width='300'/>
 
-## 赞助项目
-
-如果你觉得这个项目对你有帮助，可以请作者买本书~
-
-😚 谢谢你啦 😚
 
 <details>
     <summary>赞赏二维码</summary>
