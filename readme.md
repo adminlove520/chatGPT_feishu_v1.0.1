@@ -1,13 +1,13 @@
-<p align='center'>
+<!-- <p align='center'>
     <img src='./docs/img3.png' alt='' width='800'/>
-</p>
+</p> -->
 
 <details align='center'>
     <summary> 📷 点击展开完整功能截图</summary>
     <br>
     <p align='center'>
-<!--     <img src='https://user-images.githubusercontent.com/50035229/223590381-ed38db74-39f3-4e77-bd3a-aaa54d679286.png' alt='' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223590817-37a56eac-ab6e-4293-862a-de0988ac50b7.png' alt='' width='800'/> -->
+    <img src='https://user-images.githubusercontent.com/50035229/223590381-ed38db74-39f3-4e77-bd3a-aaa54d679286.png' alt='' width='800'/>
+    <img src='https://user-images.githubusercontent.com/50035229/223590817-37a56eac-ab6e-4293-862a-de0988ac50b7.png' alt='' width='800'/>
     <img src='https://user-images.githubusercontent.com/50035229/223591272-88e4218c-5cb6-4925-8ede-18359bdf9097.png' alt='' width='800'/>
     </p>
 
@@ -239,7 +239,7 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
     <summary>二进制安装包部署</summary>
 <br>
 
-1. 进入[release 页面](https://github.com/Leizhenpeng/feishu-chatgpt/releases/) 下载对应的安装包
+1. 进入[release 页面](https://github.com/adminlove520/chatGPT_feishu_v1.0.1/releases/) 下载对应的安装包
 2. 解压安装包,修改 config.example.yml 中配置信息,另存为 config.yml
 3. 运行程序入口文件 `feishu-chatgpt`
 
@@ -282,7 +282,7 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 
 ## 更多交流
 
-欢迎加入‘东方隐侠安全实验室’ --wechat:Qianli_zhishui
+欢迎加入”东方隐侠安全实验室"，wechat:Qianli_zhishui
 
 遇到其他问题，可以加入飞书群沟通~
 
@@ -291,5 +291,5 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 
 <details>
     <summary>公众号</summary>
-    <img width="400" src="https://user-images.githubusercontent.com/50035229/222702169-cec777f9-cb0c-4f6a-90e5-418959e668e5.png">
+    <img width="400" src="./docs/wechat.jpg">
 </details>
