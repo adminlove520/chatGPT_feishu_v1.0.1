@@ -290,6 +290,6 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 
 
 <details>
-    <summary>赞赏二维码</summary>
+    <summary>公众号</summary>
     <img width="400" src="https://user-images.githubusercontent.com/50035229/222702169-cec777f9-cb0c-4f6a-90e5-418959e668e5.png">
 </details>
