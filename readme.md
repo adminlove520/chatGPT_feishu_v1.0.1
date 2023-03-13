@@ -96,7 +96,7 @@ ps -ef | grep cpolar
 kill -9 PID
 ```
 
-更多详细介绍，参考[飞书上的小计算器: Go 机器人来啦](https://www.bilibili.com/video/BV1nW4y1378T/)
+
 
 <br>
 
@@ -280,7 +280,6 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 
 5. 发布版本，等待企业管理员审核通过
 
-更多介绍，参考[飞书上的小计算器: Go 机器人来啦](https://www.bilibili.com/video/BV12M41187rV/)
 
 ## 更多交流
 
