@@ -1,16 +1,14 @@
-<p align='center'>
+<!-- <p align='center'>
     <img src='./docs/img3.png' alt='' width='800'/>
-</p>
+</p> -->
 
 <details align='center'>
     <summary> 📷 点击展开完整功能截图</summary>
     <br>
     <p align='center'>
-    <img src='https://user-images.githubusercontent.com/50035229/224493411-085ba405-81cd-4972-b87b-74a2e811f23d.png' alt='语音对话' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223590381-ed38db74-39f3-4e77-bd3a-aaa54d679286.png' alt='角色扮演' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223590817-37a56eac-ab6e-4293-862a-de0988ac50b7.png' alt='文字成图' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/224531308-378a5bc3-2964-4e32-905f-8237dafc3f91.png' alt='图片变体' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/224531775-3f0e1e1b-a373-4774-a8f0-e120ccba6670.png' alt='帮助菜单' width='800'/>
+    <img src='https://user-images.githubusercontent.com/50035229/223590381-ed38db74-39f3-4e77-bd3a-aaa54d679286.png' alt='' width='800'/>
+    <img src='https://user-images.githubusercontent.com/50035229/223590817-37a56eac-ab6e-4293-862a-de0988ac50b7.png' alt='' width='800'/>
+    <img src='https://user-images.githubusercontent.com/50035229/223591272-88e4218c-5cb6-4925-8ede-18359bdf9097.png' alt='' width='800'/>
     </p>
 
 </details>
@@ -27,7 +25,7 @@
 
 ## 👻 机器人功能
 
-🗣 语音交流：私人直接与机器人畅所欲言 
+🗣 语音交流：直接与机器人畅所欲言 🚧
 
 💬 多话题对话：支持私人和群聊多话题讨论，高效连贯
 
@@ -48,14 +46,6 @@
 🔙 历史回档：轻松回档历史对话，继续话题讨论 🚧
 
 🔒 管理员模式：内置管理员模式，使用更安全可靠 🚧
-
-🌐 多token负载均衡：优化生产级别的高频调用场景
-
-↩️ 支持反向代理：方便国内用户访问
-
-📚 与飞书文档互动：成为企业员工的超级助手 🚧
-
-🎥 话题内容秒转PPT：周报生产力MAX 🚧
 
 
 ## 🌟 项目特点
@@ -216,16 +206,10 @@ docker run -d --name feishu-chatgpt -p 9000:9000 \
 --env APP_ENCRYPT_KEY=xxx \
 --env APP_VERIFICATION_TOKEN=xxx \
 --env BOT_NAME=chatGpt \
---env OPENAI_KEY="sk-xxx1,sk-xxx2,sk-xxx3" \
---env API_URL="https://api.openai.com" \
---env HTTP_PROXY="" \
+--env OPENAI_KEY=sk-xxx \
 feishu-chatgpt:latest
 ```
-注意:
-- `BOT_NAME` 为飞书机器人名称，例如 `chatGpt`
-- `OPENAI_KEY` 为openai key，多个key用逗号分隔，例如 `sk-xxx1,sk-xxx2,sk-xxx3`
-- `HTTP_PROXY` 为宿主机的proxy地址，例如 `http://host.docker.internal:7890`
-- `API_URL` 为openai api 接口地址，例如 `https://api.openai.com`, 没有反向代理的话，可以不用设置
+
 ---
 
 小白简易化 docker 部署
@@ -239,9 +223,7 @@ docker run -d --restart=always --name feishu-chatgpt2 -p 9000:9000 -v /etc/local
 --env APP_ENCRYPT_KEY=xxx \
 --env APP_VERIFICATION_TOKEN=xxx \
 --env BOT_NAME=chatGpt \
---env OPENAI_KEY="sk-xxx1,sk-xxx2,sk-xxx3" \
---env API_URL=https://api.openai.com \
---env HTTP_PROXY="" \
+--env OPENAI_KEY=sk-xxx \
 dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 ```
 
@@ -257,7 +239,7 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
     <summary>二进制安装包部署</summary>
 <br>
 
-1. 进入[release 页面](https://github.com/Leizhenpeng/feishu-chatgpt/releases/) 下载对应的安装包
+1. 进入[release 页面](https://github.com/adminlove520/chatGPT_feishu_v1.0.1/releases/) 下载对应的安装包
 2. 解压安装包,修改 config.example.yml 中配置信息,另存为 config.yml
 3. 运行程序入口文件 `feishu-chatgpt`
 
@@ -267,27 +249,6 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 </details>
 
 ## 详细配置步骤
-
-<details align='left'>
-    <summary> 📸 点击展开飞书机器人配置的分步截图指导</summary>
-    <br>
-    <p align='center'>
-    <img src='https://user-images.githubusercontent.com/50035229/223943381-39e0466f-2a5e-472a-9863-94eafb5f17b0.png' alt='' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223943448-228de5cb-0929-4d80-8087-8d8624dd6ddf.png' alt='' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223943485-ef331784-7940-4657-b128-70c98391e72f.png' alt='' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223943527-60e6653a-eb6e-4062-a076-b6c9da934352.png' alt='' width='800'/>
-    <img src='https://user-images.githubusercontent.com/50035229/223943972-f49adf9f-af5f-463a-8c7a-c1f0cac0e8c3.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944060-7ef630a4-4248-4509-852b-cad8bfffeefc.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944230-aff586be-31cc-40de-9b1a-7d4e259d54dd.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944350-917d115c-6c82-4d8b-9ec8-b5c82331a2dc.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944381-97396156-f5e2-467f-aaf6-b1f6e1c446b2.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223945122-f7ab3d9a-6742-43d2-970e-ddb0f284c7fa.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944507-8d1a08d7-8b5b-4f32-a90d-fd338164ec82.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944515-fb505e84-c840-484a-8df5-612f60bf27ea.png' alt='' width='800'/>
-      <img src='https://user-images.githubusercontent.com/50035229/223944590-ad61320f-c14a-4542-80ad-dee2e6469b67.png' alt='' width='800'/>
-    </p>
-</details>
-
 
 - 获取 [OpenAI](https://platform.openai.com/account/api-keys) 的 KEY
 - 创建 [飞书](https://open.feishu.cn/) 机器人
@@ -321,17 +282,14 @@ dockerproxy.com/leizhenpeng/feishu-chatgpt:latest
 
 ## 更多交流
 
-如需协助部署，或者其他定制服务，可联系下面的WeChat，支持发票~
+欢迎加入”东方隐侠安全实验室"，wechat:Qianli_zhishui
 
-遇到问题，可以加入飞书群沟通~
+遇到其他问题，可以加入飞书群沟通~
 
-<img src='./docs/talk.png' alt='' width='200'/>
+<img src='./docs/talk.png' alt='' width='300'/>
 
-## 交朋友 或者 鼓励一下
 
-如果你觉得这个项目对你有帮助，可以请作者买本书~
-
-<img width="400" src="https://user-images.githubusercontent.com/50035229/224462896-28f7b2d5-f443-4cc2-9790-7b72e5c53f15.png">
-
-😚 谢谢你啦 😚
-
+<details>
+    <summary>公众号</summary>
+    <img width="400" src="./docs/wechat.jpg">
+</details>

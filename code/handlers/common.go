@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// func sendCard
+//func sendCard
 func msgFilter(msg string) string {
 	//replace @到下一个非空的字段 为 ''
 	regex := regexp.MustCompile(`@[^ ]*`)
@@ -22,9 +22,6 @@ func parseContent(content string) string {
 	err := json.Unmarshal([]byte(content), &contentMap)
 	if err != nil {
 		fmt.Println(err)
-	}
-	if contentMap["text"] == nil {
-		return ""
 	}
 	text := contentMap["text"].(string)
 	return msgFilter(text)
@@ -53,14 +50,14 @@ func processQuote(msg string) string {
 	return strings.Replace(msg, "\\\"", "\"", -1)
 }
 
-// 将字符中 \u003c 替换为 <  等等
+//将字符中 \u003c 替换为 <  等等
 func processUnicode(msg string) string {
 	regex := regexp.MustCompile(`\\u[0-9a-fA-F]{4}`)
 	return regex.ReplaceAllStringFunc(msg, func(s string) string {
 		r, _ := regexp.Compile(`\\u`)
 		s = r.ReplaceAllString(s, "")
 		i, _ := strconv.ParseInt(s, 16, 32)
-		return strconv.Itoa(int(i))
+		return string(i)
 	})
 }
 
@@ -69,32 +66,4 @@ func cleanTextBlock(msg string) string {
 	msg = processUnicode(msg)
 	msg = processQuote(msg)
 	return msg
-}
-
-func parseFileKey(content string) string {
-	var contentMap map[string]interface{}
-	err := json.Unmarshal([]byte(content), &contentMap)
-	if err != nil {
-		fmt.Println(err)
-		return ""
-	}
-	if contentMap["file_key"] == nil {
-		return ""
-	}
-	fileKey := contentMap["file_key"].(string)
-	return fileKey
-}
-
-func parseImageKey(content string) string {
-	var contentMap map[string]interface{}
-	err := json.Unmarshal([]byte(content), &contentMap)
-	if err != nil {
-		fmt.Println(err)
-		return ""
-	}
-	if contentMap["image_key"] == nil {
-		return ""
-	}
-	imageKey := contentMap["image_key"].(string)
-	return imageKey
 }

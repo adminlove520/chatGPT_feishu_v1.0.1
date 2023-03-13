@@ -2,8 +2,9 @@ package handlers
 
 import (
 	"context"
+	"fmt"
 	"start-feishubot/initialization"
-	"start-feishubot/services/openai"
+	"start-feishubot/services"
 
 	larkcard "github.com/larksuite/oapi-sdk-go/v3/card"
 	larkim "github.com/larksuite/oapi-sdk-go/v3/service/im/v1"
@@ -24,7 +25,7 @@ const (
 // handlers 所有消息类型类型的处理器
 var handlers MessageHandlerInterface
 
-func InitHandlers(gpt *openai.ChatGPT, config initialization.Config) {
+func InitHandlers(gpt services.ChatGPT, config initialization.Config) {
 	handlers = NewMessageHandler(gpt, config)
 }
 
@@ -49,7 +50,7 @@ func CardHandler() func(ctx context.Context,
 func judgeCardType(cardAction *larkcard.CardAction) HandlerType {
 	actionValue := cardAction.Action.Value
 	chatType := actionValue["chatType"]
-	//fmt.Printf("chatType: %v", chatType)
+	fmt.Printf("chatType: %v", chatType)
 	if chatType == "group" {
 		return GroupHandler
 	}
@@ -61,6 +62,7 @@ func judgeCardType(cardAction *larkcard.CardAction) HandlerType {
 
 func judgeChatType(event *larkim.P2MessageReceiveV1) HandlerType {
 	chatType := event.Event.Message.ChatType
+	fmt.Printf("chatType: %v", *chatType)
 	if *chatType == "group" {
 		return GroupHandler
 	}
@@ -68,4 +70,12 @@ func judgeChatType(event *larkim.P2MessageReceiveV1) HandlerType {
 		return UserHandler
 	}
 	return "otherChat"
+}
+
+func judgeMsgType(event *larkim.P2MessageReceiveV1) string {
+	msgType := event.Event.Message.MessageType
+	if *msgType == "text" {
+		return "text"
+	}
+	return ""
 }
